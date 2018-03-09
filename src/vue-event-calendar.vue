@@ -106,12 +106,16 @@
                         events: events
                     }
                 }
-                if (events.length > 0) {
+                this.$emit('day-changed', {
+                    date: date,
+                    events: events
+                })
+                /*if (events.length > 0) {
                     this.$emit('day-changed', {
                         date: date,
                         events: events
                     })
-                }
+                }*/
             },
             handleMonthChanged(yearMonth) {
                 this.$emit('month-changed', yearMonth)
