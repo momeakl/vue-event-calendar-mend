@@ -1,7 +1,7 @@
 {
   "name": "vue-event-calendar-mend",
   "description": "基于vue-event-calendar 改造",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "author": "gaobing <In_Energy@163.com>",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot",

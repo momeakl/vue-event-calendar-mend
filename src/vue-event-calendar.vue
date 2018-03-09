@@ -101,6 +101,7 @@
                     return isEqualDateStr(event.date, date)
                 })
                 if (events.length > 0) {
+                    console.log('have data')
                     this.selectedDayEvents = {
                         date: date,
                         events: events
@@ -110,12 +111,6 @@
                     date: date,
                     events: events
                 })
-                /*if (events.length > 0) {
-                    this.$emit('day-changed', {
-                        date: date,
-                        events: events
-                    })
-                }*/
             },
             handleMonthChanged(yearMonth) {
                 this.$emit('month-changed', yearMonth)
