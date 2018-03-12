@@ -789,18 +789,16 @@ var inBrowser = typeof window !== 'undefined';
             var events = this.events.filter(function (event) {
                 return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__tools_js__["a" /* isEqualDateStr */])(event.date, date);
             });
-            if (events.length > 0 && this.isEventSelected || !this.isEventSelected) {
+            if (events.length > 0) {
                 this.selectedDayEvents = {
                     date: date,
                     events: events
                 };
             }
-            if (events.length > 0) {
-                this.$emit('day-changed', {
-                    date: date,
-                    events: events
-                });
-            }
+            this.$emit('day-changed', {
+                date: date,
+                events: events
+            });
         },
         handleMonthChanged: function handleMonthChanged(yearMonth) {
             this.$emit('month-changed', yearMonth);
@@ -951,7 +949,7 @@ var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(5),
   /* template */
-  __webpack_require__(14),
+  __webpack_require__(15),
   /* scopeId */
   null,
   /* cssModules */
@@ -969,7 +967,7 @@ var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(6),
   /* template */
-  __webpack_require__(15),
+  __webpack_require__(14),
   /* scopeId */
   null,
   /* cssModules */
@@ -1003,22 +1001,6 @@ module.exports = Component.exports
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "wrapper"
-  }, [_c('h3', {
-    staticClass: "title"
-  }, [_vm._v(_vm._s(_vm.index + 1) + ". " + _vm._s(_vm.event.title))]), _vm._v(" "), _c('p', {
-    staticClass: "time"
-  }, [_vm._v(_vm._s(_vm.dateTimeFormatter(Date.parse(new Date(_vm.event.date)), _vm.i18n[_vm.locale].fullFormat)))]), _vm._v(" "), _c('p', {
-    staticClass: "desc"
-  }, [_vm._v(_vm._s(_vm.event.desc))])])
-},staticRenderFns: []}
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
     staticClass: "events-wrapper",
     style: (_vm.bgColor)
   }, [_c('h2', {
@@ -1036,6 +1018,22 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     })], 1)
   }))], 2)])
+},staticRenderFns: []}
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "wrapper"
+  }, [_c('h3', {
+    staticClass: "title"
+  }, [_vm._v(_vm._s(_vm.index + 1) + ". " + _vm._s(_vm.event.title))]), _vm._v(" "), _c('p', {
+    staticClass: "time"
+  }, [_vm._v(_vm._s(_vm.dateTimeFormatter(Date.parse(new Date(_vm.event.date)), _vm.i18n[_vm.locale].fullFormat)))]), _vm._v(" "), _c('p', {
+    staticClass: "desc"
+  }, [_vm._v(_vm._s(_vm.event.desc))])])
 },staticRenderFns: []}
 
 /***/ }),

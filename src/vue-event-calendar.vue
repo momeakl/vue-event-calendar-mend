@@ -101,7 +101,6 @@
                     return isEqualDateStr(event.date, date)
                 })
                 if (events.length > 0) {
-                    console.log('have data')
                     this.selectedDayEvents = {
                         date: date,
                         events: events
